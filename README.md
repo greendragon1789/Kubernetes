@@ -23,3 +23,4 @@ gcloud compute routers nats create nat-config \
     --nat-all-subnet-ip-ranges \
     --auto-allocate-nat-external-ips
 ```
+Or follow the post on the Medium (https://medium.com/google-cloud/using-cloud-nat-with-gke-cluster-c82364546d9e)
