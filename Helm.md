@@ -12,3 +12,9 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 helm init --service-account tiller --upgrade
 ```
+
+**UnInstalling Tiller**
+Releases are stored in ConfigMaps inside of the kube-system namespace. You will have to manually delete them to get rid of the record, or use
+```
+helm delete --purge
+```
