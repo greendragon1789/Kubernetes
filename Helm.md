@@ -5,7 +5,7 @@ Once you have Helm ready, you can initialize the local CLI and also install Till
 # helm init
 ```
 
-If you have many Kubernetes cluster. Please using ServiceAccount in Kubernetes:
+If you have **multi Kubernetes cluster**. Please using ServiceAccount in Kubernetes:
 ```
 kubectl create serviceaccount --namespace kube-system tiller
 kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
