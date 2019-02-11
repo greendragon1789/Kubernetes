@@ -13,7 +13,7 @@ Using Gloud CLI to create a Cloud Router:
 ```
 gcloud compute routers create demo-router \
     --network demo-cluster \
-    --region  asia-southeast1
+    --region asia-southeast1
 ```
 Using Gloud CLI to create a NAT:
 ```
@@ -28,5 +28,5 @@ Or follow the post on [The Medium](https://medium.com/google-cloud/using-cloud-n
 # Delete Router and NAT
 ```
 gcloud compute routers nats delete nat-config --router=demo-router --router-region asia-southeast1
-gcloud compute routers delete demo-router --region  asia-southeast1
+gcloud compute routers delete demo-router --region asia-southeast1
 ```
