@@ -24,3 +24,9 @@ gcloud compute routers nats create nat-config \
     --auto-allocate-nat-external-ips
 ```
 Or follow the post on [The Medium](https://medium.com/google-cloud/using-cloud-nat-with-gke-cluster-c82364546d9e)
+
+# Delete Router and NAT
+```
+gcloud compute routers nats delete nat-config --router=demo-router --router-region asia-southeast1
+gcloud compute routers delete demo-router --region  asia-southeast1
+```
