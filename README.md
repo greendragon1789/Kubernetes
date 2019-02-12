@@ -17,7 +17,7 @@ gcloud compute routers create demo-router \
 ```
 Using Gloud CLI to create a NAT:
 ```
-gcloud compute routers nats create nat-config \
+gcloud compute routers nats create demo-nat \
     --router-region asia-southeast1 \
     --router demo-router \
     --nat-all-subnet-ip-ranges \
