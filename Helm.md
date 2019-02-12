@@ -2,7 +2,7 @@
 
 Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step
 ```
-# helm init
+helm init
 ```
 
 Most cloud providers enable a feature called Role-Based Access Control - RBAC for short. If your cloud provider enables this feature, you will need to create a service account for Tiller with the right roles and permissions to access resources. Please using ServiceAccount in Kubernetes:
