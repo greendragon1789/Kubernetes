@@ -1,5 +1,6 @@
 # Configuration in Helm
 
+## Install Tiller
 Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step
 ```
 helm init
@@ -13,7 +14,7 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 helm init --service-account tiller --upgrade
 ```
 
-**UnInstalling Tiller**
+## UnInstalling Tiller
 Releases are stored in ConfigMaps inside of the kube-system namespace. You will have to manually delete them to get rid of the record, or use
 ```
 helm delete --purge
