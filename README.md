@@ -7,6 +7,24 @@ Using Terraform to create **Private Cluster**
 ```
 **Note**: .json file get from AWS or GCP, in GCP is Service Access with Full Permission.
 
+## Create Kubernetes with CLI
+
+## Create node pool with CLI
+```
+gcloud container node-pools create pool-2 \
+--cluster=qa \
+--machine-type=n1-standard-2 \
+--num-nodes=3 \
+--service-account=k8s-cluster-sa@veep-staging.iam.gserviceaccount.com \
+--preemptible \
+--enable-autoupgrade \
+--enable-autoscaling \
+--max-nodes=6 \
+--min-nodes=1 \
+--region=asia-southeast1-a
+```
+* Note: Add service-account params when create, it can not edit after
+
 
 ## Create Router and NAT
 After create `Private Cluster`, All nodes cannot reach the Internet. So, must create the Cloud Router in same region as the instances that use Cloud NAT to reach the Internet. If do not reach the Internet, it cause of fail pull images from Internet.
