@@ -15,7 +15,6 @@ gcloud beta container clusters create default \
   --metadata disable-legacy-endpoints=true \
   --enable-autoupgrade \
   --enable-cloud-logging \
-  --cluster-ipv4-cidr="172.31.0.0/16" \
   --enable-ip-alias \
   --machine-type=n1-standard-2 \
   --network=be \
@@ -26,8 +25,7 @@ gcloud beta container clusters create default \
   --min-nodes=3 \
   --enable-private-nodes \
   --zone=asia-southeast1-a \
-  --service-account=k8s-be-service-account@veep-production.iam.gserviceaccount.com \
-  --master-ipv4-cidr=172.16.0.64/28
+  --service-account=k8s@veep-production.iam.gserviceaccount.com \
 ```
 
 
