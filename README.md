@@ -8,6 +8,28 @@ Using Terraform to create **Private Cluster**
 **Note**: .json file get from AWS or GCP, in GCP is Service Access with Full Permission.
 
 ## Create Kubernetes with CLI
+```
+gcloud beta container clusters create default \
+  --no-enable-basic-auth \
+  --no-issue-client-certificate \
+  --metadata disable-legacy-endpoints=true \
+  --enable-autoupgrade \
+  --enable-cloud-logging \
+  --cluster-ipv4-cidr="172.31.0.0/16" \
+  --enable-ip-alias \
+  --machine-type=n1-standard-2 \
+  --network=be \
+  --subnetwork=be-app \
+  --tags=k8s-node \
+  --enable-autoscaling \
+  --max-nodes=9 \
+  --min-nodes=3 \
+  --enable-private-nodes \
+  --zone=asia-southeast1-a \
+  --service-account=k8s-be-service-account@veep-production.iam.gserviceaccount.com \
+  --master-ipv4-cidr=172.16.0.64/28
+```
+
 
 ## Create node pool with CLI
 ```
@@ -23,7 +45,7 @@ gcloud container node-pools create pool-2 \
 --min-nodes=1 \
 --region=asia-southeast1-a
 ```
-* Note: Add service-account params when create, it can not edit after
+* Note: Add **service-account** params when create, it can not edit after
 
 
 ## Create Router and NAT
