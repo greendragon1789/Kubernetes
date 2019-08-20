@@ -69,4 +69,3 @@ Or follow the post on [The Medium](https://medium.com/google-cloud/using-cloud-n
 gcloud compute routers nats delete demo-nat --router=demo-router --router-region asia-southeast1
 gcloud compute routers delete demo-router --region asia-southeast1
 ```
-#
